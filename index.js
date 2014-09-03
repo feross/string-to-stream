@@ -11,7 +11,7 @@ function StringStream (str) {
   this._str = str
 }
 
-StringStream.prototype._read = function(n) {
+StringStream.prototype._read = function () {
   if (!this.ended) {
     var self = this
     process.nextTick(function () {
