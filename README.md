@@ -1,4 +1,4 @@
-# string-to-stream [![travis](https://img.shields.io/travis/feross/string-to-stream.svg)](https://travis-ci.org/feross/string-to-stream) [![npm](https://img.shields.io/npm/v/string-to-stream.svg)](https://npmjs.org/package/string-to-stream)
+# string-to-stream [![travis](https://img.shields.io/travis/feross/string-to-stream/master.svg)](https://travis-ci.org/feross/string-to-stream) [![npm](https://img.shields.io/npm/v/string-to-stream.svg)](https://npmjs.org/package/string-to-stream)
 
 #### Convert a string into a stream (streams2)
 
