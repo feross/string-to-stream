@@ -1,7 +1,7 @@
 module.exports = StringStream
 
 var inherits = require('inherits')
-var stream = require('stream')
+var stream = require('readable-stream')
 
 inherits(StringStream, stream.Readable)
 
