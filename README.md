@@ -11,8 +11,6 @@
 
 #### Convert a string into a stream (streams2)
 
-[![browser support](https://ci.testling.com/feross/string-to-stream.png)](https://ci.testling.com/feross/string-to-stream)
-
 ### install
 
 ```
