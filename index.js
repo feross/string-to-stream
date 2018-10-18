@@ -16,7 +16,7 @@ StringStream.prototype._read = function () {
   if (!this.ended) {
     var self = this
     process.nextTick(function () {
-      self.push(new Buffer(self._str, self._encoding))
+      self.push(Buffer.from(self._str, self._encoding))
       self.push(null)
     })
     this.ended = true
