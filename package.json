@@ -11,7 +11,7 @@
     "readable-stream": "^3.4.0"
   },
   "devDependencies": {
-    "concat-stream": "^1.4.6",
+    "concat-stream": "^2.0.0",
     "standard": "*",
     "tape": "^4.0.0"
   },
