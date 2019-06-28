@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "concat-stream": "^1.4.6",
+    "standard": "*",
     "tape": "^4.0.0"
   },
   "homepage": "https://github.com/feross/string-to-stream",
@@ -32,6 +33,6 @@
     "url": "git://github.com/feross/string-to-stream.git"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "standard && tape test/*.js"
   }
 }
