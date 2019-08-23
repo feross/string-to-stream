@@ -1,24 +1,25 @@
-module.exports = StringStream
+module.exports = stringToStream
 
-var inherits = require('inherits')
-var stream = require('readable-stream')
+const stream = require('readable-stream')
 
-inherits(StringStream, stream.Readable)
+class StringStream extends stream.Readable {
+  constructor (str, encoding) {
+    super()
+    this._str = str
+    this._encoding = encoding || 'utf8'
+  }
 
-function StringStream (str, encoding) {
-  if (!(this instanceof StringStream)) return new StringStream(str, encoding)
-  stream.Readable.call(this)
-  this._str = str
-  this._encoding = encoding || 'utf8'
+  _read () {
+    if (!this.ended) {
+      process.nextTick(() => {
+        this.push(Buffer.from(this._str, this._encoding))
+        this.push(null)
+      })
+      this.ended = true
+    }
+  }
 }
 
-StringStream.prototype._read = function () {
-  if (!this.ended) {
-    var self = this
-    process.nextTick(function () {
-      self.push(Buffer.from(self._str, self._encoding))
-      self.push(null)
-    })
-    this.ended = true
-  }
+function stringToStream (str, encoding) {
+  return new StringStream(str, encoding)
 }
