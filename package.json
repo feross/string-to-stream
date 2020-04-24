@@ -12,7 +12,7 @@
   "devDependencies": {
     "concat-stream": "^2.0.0",
     "standard": "*",
-    "tape": "^4.0.0"
+    "tape": "^5.0.0"
   },
   "homepage": "https://github.com/feross/string-to-stream",
   "keywords": [
